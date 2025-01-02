@@ -2,8 +2,8 @@ import { defineConfig, devices } from '@playwright/test';
 import {defineBddConfig} from 'playwright-bdd';
 
 const testDir = defineBddConfig({
-       features: 'login.feature',
-       steps: ['ecomsteps.ts']
+       features: 'tests/login.feature',
+       steps: ['tests/ecomsteps.ts']
 })
 
 /**
@@ -36,6 +36,8 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    screenshot: 'only-on-failure',
+    video:'retain-on-failure'
   },
 
   /* Configure projects for major browsers */
