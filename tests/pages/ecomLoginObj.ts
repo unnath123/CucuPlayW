@@ -1,4 +1,4 @@
-
+import { expect } from '@playwright/test'
 
 class EcomLoginPage {
     page: any;
@@ -14,5 +14,24 @@ class EcomLoginPage {
         this.signIn_btn = page.locator("//button[normalize-space()='Sign in']")
     }
 
-    
+    async navigateToUrl(url: string){
+        await this.page.goto(url);
+    }
+    async clickonAutomationLink(){
+        await this.Automation_btn.click();
+    }
+    async EnterEmail(emailaddress: string){
+        await this.email_inpt.fill(emailaddress);
+    }
+    async EnterPassword(password: string){
+        await this.password_input.fill(password);
+    }
+    async clickSignIn(){
+        await this.signIn_btn.click();
+    }
+    async verifyurl(url_text: string){
+        await expect(this.page).toHaveURL(new RegExp (url_text))
+    }
 }
+
+export {EcomLoginPage}

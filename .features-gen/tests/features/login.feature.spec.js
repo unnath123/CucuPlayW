@@ -1,43 +1,43 @@
-// Generated from: tests\login.feature
-import { test } from "playwright-bdd";
+// Generated from: tests\features\login.feature
+import { test } from "../../../tests/fixtures/fixtures.ts";
 
 test.describe('ecom website login', () => {
 
-  test('Verify user is able to login with valid credentials', { tag: ['@login'] }, async ({ Given, page, And, When, Then }) => { 
-    await Given('I navigate to "https://ultimateqa.com/automation"', null, { page }); 
-    await And('I click on "Login automation"', null, { page }); 
-    await And('I enter E-Mail Address "unni123@gmail.com"', null, { page }); 
-    await And('I enter password "test12345678"', null, { page }); 
-    await When('I click on the "Sign in"', null, { page }); 
-    await Then('I should verify url contains "/collections"', null, { page }); 
+  test('Verify user is able to login with valid credentials', { tag: ['@login'] }, async ({ Given, ecomloginpage, And, When, Then }) => { 
+    await Given('I navigate to "https://ultimateqa.com/automation"', null, { ecomloginpage }); 
+    await And('I click on "Login automation"', null, { ecomloginpage }); 
+    await And('I enter E-Mail Address "unni123@gmail.com"', null, { ecomloginpage }); 
+    await And('I enter password "test12345678"', null, { ecomloginpage }); 
+    await When('I click on the "Sign in"', null, { ecomloginpage }); 
+    await Then('I should verify url contains "/collections"', null, { ecomloginpage }); 
   });
 
   test.describe('Verify user is able to login with following valid credentials', () => {
 
-    test('Example #1', { tag: ['@login'] }, async ({ Given, page, And, When, Then }) => { 
-      await Given('I navigate to "https://ultimateqa.com/automation"', null, { page }); 
-      await And('I click on "Login automation"', null, { page }); 
-      await And('I enter E-Mail Address "sandeep@gmail.com"', null, { page }); 
-      await And('I enter password "sandeep1234567"', null, { page }); 
-      await When('I click on the "Sign in"', null, { page }); 
+    test('Example #1', { tag: ['@login'] }, async ({ Given, ecomloginpage, And, When, Then, page }) => { 
+      await Given('I navigate to "https://ultimateqa.com/automation"', null, { ecomloginpage }); 
+      await And('I click on "Login automation"', null, { ecomloginpage }); 
+      await And('I enter E-Mail Address "sandeep@gmail.com"', null, { ecomloginpage }); 
+      await And('I enter password "sandeep1234567"', null, { ecomloginpage }); 
+      await When('I click on the "Sign in"', null, { ecomloginpage }); 
       await Then('If user not able to login verify url contains "users/sign_in"', null, { page }); 
     });
 
-    test('Example #2', { tag: ['@login'] }, async ({ Given, page, And, When, Then }) => { 
-      await Given('I navigate to "https://ultimateqa.com/automation"', null, { page }); 
-      await And('I click on "Login automation"', null, { page }); 
-      await And('I enter E-Mail Address "darshan@gmail.com"', null, { page }); 
-      await And('I enter password "darshan12345"', null, { page }); 
-      await When('I click on the "Sign in"', null, { page }); 
+    test('Example #2', { tag: ['@login'] }, async ({ Given, ecomloginpage, And, When, Then, page }) => { 
+      await Given('I navigate to "https://ultimateqa.com/automation"', null, { ecomloginpage }); 
+      await And('I click on "Login automation"', null, { ecomloginpage }); 
+      await And('I enter E-Mail Address "darshan@gmail.com"', null, { ecomloginpage }); 
+      await And('I enter password "darshan12345"', null, { ecomloginpage }); 
+      await When('I click on the "Sign in"', null, { ecomloginpage }); 
       await Then('If user not able to login verify url contains "users/sign_in"', null, { page }); 
     });
 
-    test('Example #3', { tag: ['@login'] }, async ({ Given, page, And, When, Then }) => { 
-      await Given('I navigate to "https://ultimateqa.com/automation"', null, { page }); 
-      await And('I click on "Login automation"', null, { page }); 
-      await And('I enter E-Mail Address "lacchi@gmail.com"', null, { page }); 
-      await And('I enter password "lacchi12345"', null, { page }); 
-      await When('I click on the "Sign in"', null, { page }); 
+    test('Example #3', { tag: ['@login'] }, async ({ Given, ecomloginpage, And, When, Then, page }) => { 
+      await Given('I navigate to "https://ultimateqa.com/automation"', null, { ecomloginpage }); 
+      await And('I click on "Login automation"', null, { ecomloginpage }); 
+      await And('I enter E-Mail Address "lacchi@gmail.com"', null, { ecomloginpage }); 
+      await And('I enter password "lacchi12345"', null, { ecomloginpage }); 
+      await When('I click on the "Sign in"', null, { ecomloginpage }); 
       await Then('If user not able to login verify url contains "users/sign_in"', null, { page }); 
     });
 
@@ -49,7 +49,7 @@ test.describe('ecom website login', () => {
 
 test.use({
   $test: ({}, use) => use(test),
-  $uri: ({}, use) => use('tests\\login.feature'),
+  $uri: ({}, use) => use('tests\\features\\login.feature'),
   $bddFileData: ({}, use) => use(bddFileData),
 });
 

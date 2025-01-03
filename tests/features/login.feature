@@ -21,8 +21,8 @@ Feature: ecom website login
 	    Then If user not able to login verify url contains "users/sign_in"
 		Examples:
 			| EmailAddress | Password | 
-			| sandeep@gmail.com  | sandeep12345678  | 	
-			| darshan@gmail.com  | darshan1234  | 	
-			| lacchi@gmail.com   | lacchi1234  | 		
+			| sandeep@gmail.com  | sandeep1234567  | 	
+			| darshan@gmail.com  | darshan12345  | 	
+			| lacchi@gmail.com   | lacchi12345  | 		
 
 
