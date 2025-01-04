@@ -1,9 +1,17 @@
 import { defineConfig, devices } from '@playwright/test';
 import {defineBddConfig} from 'playwright-bdd';
+import dotenv from 'dotenv'
+
+
 
 const testDir = defineBddConfig({
-       features: 'tests/features/login.feature',
-       steps: ['tests/steps/ecomLoginsteps.ts' , 'tests/fixtures/fixtures.ts']
+       features: 'tests/features/**.feature',
+       steps: ['tests/steps/**steps.ts' , 'tests/fixtures/fixtures.ts']
+})
+
+
+dotenv.config({
+  path:'env/.env.dev'
 })
 
 /**
