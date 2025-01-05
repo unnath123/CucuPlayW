@@ -7,6 +7,8 @@ const { Given, When, Then } = createBdd(test);
     // Step: Given I navigate to home page
     // From: tests\features\environment.feature:11:3
     console.log(process.env.URL);
+    console.log(process.env.EMAIL)
+    console.log(process.env.PASSWORD)
     await ecomloginpage.navigateToUrl(process.env.URL)
   });
   
