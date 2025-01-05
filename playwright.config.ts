@@ -11,7 +11,7 @@ const testDir = defineBddConfig({
 
 
 dotenv.config({
-  path:'env/.env.qa'
+  path:`env/.env.${process.env.ENV}`
 })
 
 /**
