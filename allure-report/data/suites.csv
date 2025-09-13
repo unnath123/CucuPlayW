@@ -1,0 +1,2 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","11036","Verify user is able to login with dev, qa, and prod","chromium","Sun Jan 12 01:57:16 IST 2025","passed","Sun Jan 12 01:57:27 IST 2025","Verify login with different enviroment","tests\features\environment.feature.spec.js","",""

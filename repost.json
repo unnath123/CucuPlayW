@@ -1,0 +1,154 @@
+{
+  "config": {
+    "configFile": "D:\\Playwright\\CucuPlayW\\playwright.config.ts",
+    "rootDir": "D:/Playwright/CucuPlayW/.features-gen",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "dot",
+        null
+      ],
+      [
+        "list",
+        null
+      ],
+      [
+        "D:\\Playwright\\CucuPlayW\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "repost.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "D:/Playwright/CucuPlayW/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/Playwright/CucuPlayW/.features-gen",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.49.1",
+    "workers": 6,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "tests\\features\\environment.feature.spec.js",
+      "file": "tests/features/environment.feature.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Verify login with different enviroment",
+          "file": "tests/features/environment.feature.spec.js",
+          "line": 4,
+          "column": 15,
+          "specs": [
+            {
+              "title": "Verify user is able to login with dev, qa, and prod",
+              "ok": true,
+              "tags": [
+                "only"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 11036,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "https://courses.ultimateqa.com/users/sign_in\n"
+                        },
+                        {
+                          "text": "qa123@gmail.com\n"
+                        },
+                        {
+                          "text": "qa12345678\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Given I navigate to home page",
+                          "duration": 3451
+                        },
+                        {
+                          "title": "And I enter E-Mail Address and Password",
+                          "duration": 192
+                        },
+                        {
+                          "title": "When I click on the \"Sign in\"",
+                          "duration": 110
+                        },
+                        {
+                          "title": "Then I should verify url contains \"/collections\"",
+                          "duration": 2862
+                        }
+                      ],
+                      "startTime": "2025-01-11T20:27:16.463Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8590f6056bf594f1b6d9-58a199e082789c7f6b79",
+              "file": "tests/features/environment.feature.spec.js",
+              "line": 6,
+              "column": 8
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-01-11T20:27:15.062Z",
+    "duration": 13485.408,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
